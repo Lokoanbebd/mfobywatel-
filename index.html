@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>mfobywatel</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+  <link rel="manifest" href="manifest.json" />
+</head>
+<body>
+  <div id="login-screen">
+    <h2>mfobywatel</h2>
+    <input type="password" placeholder="Wpisz PIN" id="pin" />
+    <button onclick="login()">Zaloguj</button>
+  </div>
+
+  <div id="generator-screen" style="display:none;">
+    <h2>Generator danych</h2>
+    <input placeholder="Imię" id="fname" />
+    <input placeholder="Nazwisko" id="lname" />
+    <input placeholder="Adres" id="address" />
+    <input placeholder="PESEL" id="pesel" />
+    <input type="file" accept="image/*" id="photo" />
+    <button onclick="generateID()">Generuj dowód</button>
+  </div>
+
+  <div id="id-screen" style="display:none;">
+    <h2>mDowód</h2>
+    <p id="output"></p>
+    <img id="user-photo" src="" alt="Twoje zdjęcie" width="120"/>
+    <div id="flag"></div>
+    <div id="time"></div>
+    <img src="orzel.svg" id="orzel" />
+    <div id="qrcode"></div>
+  </div>
+</body>
+</html>
